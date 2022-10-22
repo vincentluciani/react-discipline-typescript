@@ -1,0 +1,32 @@
+.box-wrapper{
+    border: 1px solid lightgray;
+    border-radius:  10px;
+    text-align: left;
+    padding: 10px 10px 0px 10px;
+}
+
+.box-header{
+    margin-bottom: 10px;
+    height: 65px;
+    display:flex;
+}
+
+.box-icon-container{
+    width: 16px;
+    margin-right: 13px;
+    padding-top: 2px;
+}
+
+.expander{
+    margin-top: 5px;
+    font-size: 24px;
+    width: 25px;
+}
+.box-title{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #c4c4c4;
+    text-underline-offset: 3px;
+    text-decoration-thickness: from-font;
+}

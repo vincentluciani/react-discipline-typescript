@@ -1,0 +1,13 @@
+
+@media (min-width: 650px){
+    .habit-box{
+        width: 225px;
+        height: 206px;
+    }
+}
+
+@media (max-width: 649px){
+    .habit-box{
+        width: 300px;
+    }
+}
