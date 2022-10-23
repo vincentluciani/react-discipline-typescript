@@ -7,3 +7,12 @@
     background: grey;
     opacity: 0.7;
 }
+
+.overlay{
+    background-color: white;
+    z-index: 20;
+    position: relative;
+    top: 50vh;
+    left: calc(50vw - 200px);
+    width: 400px;
+}

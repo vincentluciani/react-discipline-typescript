@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import ReactDOM from "react-dom";
 import styles from './ModalWindow.module.css'
 // type ModalWindowProps = {
@@ -14,27 +14,33 @@ import styles from './ModalWindow.module.css'
 //     title: string
 // }
 
+
+
 const BackDrop = () => {
     return (
         <div className={styles["backdrop"]}></div>
     )
 }
+/* https://stackoverflow.com/questions/63566207/error-with-logical-operator-jsx-and-typescript */
 const Overlay= (props) => {
+    /* todo add the class of the parent */
     return (
-        <div className={props.className}>
-            <div>{props.title}</div>
-            <div>{props.children}</div>
-            <div onClick={props.onConfirm}>OK</div>
-        </div>
+        (<div className={styles["overlay"]}><div>{props.title}</div><div>{props.children}</div><div onClick={props.onConfirm}>OK</div></div>) 
     )
 }
 
 /* document.getElementById('backdrop-root') as HTMLElement */ 
 const ModalWindow = ( props )  => {
+    const [isVisible,setIsVisible] = useState(true)
+
+    const handleClose = () => {
+        setIsVisible(false);
+        props.onConfirm();
+    }
     return (
         <React.Fragment>
-            {ReactDOM.createPortal(<BackDrop />, document.getElementById('backdrop-root'))}
-            {ReactDOM.createPortal(<Overlay onConfirm={props.onConfirm} title={props.modalTitle} className={props.className} children={props.children}></Overlay>, document.getElementById('overlay-root'))}
+           <> { isVisible &&  ReactDOM.createPortal(<BackDrop />, document.getElementById('backdrop-root'))} </>
+           <> { isVisible &&  ReactDOM.createPortal(<Overlay onConfirm={handleClose} title={props.modalTitle} className={props.className} children={props.children}></Overlay>, document.getElementById('overlay-root'))} </>
         </React.Fragment>
     )
 }
