@@ -7,7 +7,7 @@ import ModalWindow from './components/common/ModalWindow/ModalWindow';
 function App() {
 
   const testFunction = () =>{
-    console.log('test')
+    console.log('test ModalWindow')
   }
   return (
     <div className="App">

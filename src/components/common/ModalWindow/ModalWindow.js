@@ -1,0 +1,43 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import styles from './ModalWindow.module.css'
+// type ModalWindowProps = {
+//     onConfirm: any;
+//     className: any;
+//     children: React.ReactNode
+//     modalTitle: string;
+// }
+
+// interface OverlayProps {
+//     onConfirm: ()=>void;
+//     className: any;
+//     title: string
+// }
+
+const BackDrop = () => {
+    return (
+        <div className={styles["backdrop"]}></div>
+    )
+}
+const Overlay= (props) => {
+    return (
+        <div className={props.className}>
+            <div>{props.title}</div>
+            <div>{props.children}</div>
+            <div onClick={props.onConfirm}>OK</div>
+        </div>
+    )
+}
+
+/* document.getElementById('backdrop-root') as HTMLElement */ 
+const ModalWindow = ( props )  => {
+    return (
+        <React.Fragment>
+            {ReactDOM.createPortal(<BackDrop />, document.getElementById('backdrop-root'))}
+            {ReactDOM.createPortal(<Overlay onConfirm={props.onConfirm} title={props.modalTitle} className={props.className} children={props.children}></Overlay>, document.getElementById('overlay-root'))}
+        </React.Fragment>
+    )
+}
+
+export default ModalWindow
+
