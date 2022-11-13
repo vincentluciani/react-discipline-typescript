@@ -23,13 +23,11 @@ const BackDrop = () => {
 }
 /* https://stackoverflow.com/questions/63566207/error-with-logical-operator-jsx-and-typescript */
 const Overlay= (props) => {
-    /* todo add the class of the parent */
     return (
         (<div className={styles["overlay"]}><div>{props.title}</div><div>{props.children}</div><div onClick={props.onConfirm}>OK</div></div>) 
     )
 }
 
-/* document.getElementById('backdrop-root') as HTMLElement */ 
 const ModalWindow = ( props )  => {
     const [isVisible,setIsVisible] = useState(true)
 

@@ -11,9 +11,9 @@ interface ButtonProps {
 const ActionButton = ({title, icon, buttonAction }: ButtonProps) => {
 
     return(
-        <div className={styles['action-button']}>
+        <div className={styles['action-button']} onClick={buttonAction}>
             <div>{title}</div>
-            <div className={styles["action-icon-container"]} onClick={buttonAction}>{icon}</div>
+            <div className={styles["action-icon-container"]} >{icon}</div>
         </div>
     )
 
