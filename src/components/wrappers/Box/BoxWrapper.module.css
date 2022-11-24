@@ -1,5 +1,5 @@
 .box-wrapper{
-    border: 1px solid lightgray;
+    border: 3px solid var(--main-color,lightgrey);
     border-radius:  10px;
     text-align: left;
     padding: 10px 10px 0px 10px;
