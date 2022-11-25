@@ -1,5 +1,5 @@
 import styles from './HabitBox.module.css'
-import BoxWrapper from '../wrappers/Box/BoxWrapper'
+import CollapsableBoxWithTitleWrapper from '../wrappers/Box/CollapsableBoxWithTitleWrapper'
 import { useState } from 'react'
 import AuthenticationContext from '../context/authenticationContext'
 import React, { useContext } from 'react';
@@ -13,7 +13,7 @@ const HabitBox = props => {
     const loginStatus = (context.isLoggedIn) ? 'logged in' : 'logged out'
 
     return (
-        <BoxWrapper taskStatus={taskStatus} boxTitle={props.boxTitle} className={styles['habit-box']}>Text inside the box - {loginStatus}</BoxWrapper>
+        <CollapsableBoxWithTitleWrapper taskStatus={taskStatus} boxTitle={props.boxTitle} className={styles['habit-box']}>Text inside the box - {loginStatus}</CollapsableBoxWithTitleWrapper>
     )
 }
 

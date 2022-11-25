@@ -1,15 +1,17 @@
-import styles from './BoxWrapper.module.css'
+import styles from './CollapsableBoxWithTitleWrapper.module.css'
 import { FaTasks } from "react-icons/fa";
 import { BsPlusLg } from "react-icons/bs";
 import { useState } from 'react';
-const BoxWrapper = props => {
+import CommonBox from './CommonBox'
+
+const CollapsableBoxWithTitleWrapper = props => {
 
     const wrapperClassName =  `${styles['box-wrapper']} ${props.className} ${props.taskStatus && styles[props.taskStatus]}`
    
     const [expanded,setExpanded] = useState(false)
 
     return (
-        <div className={wrapperClassName}>
+        <CommonBox className={wrapperClassName}>
             <div className = {styles['box-header']}>
                 <div className={styles['box-icon-container']}><FaTasks /></div>
                 <div className={styles['box-title']}>Title: {props.boxTitle}</div>
@@ -18,8 +20,8 @@ const BoxWrapper = props => {
             <div className={styles['box-content']}>
                 {props.children}
             </div>
-        </div>
+        </CommonBox>
     )
 }
 
-export default BoxWrapper
+export default CollapsableBoxWithTitleWrapper

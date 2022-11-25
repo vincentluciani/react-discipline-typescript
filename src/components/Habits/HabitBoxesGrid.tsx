@@ -21,13 +21,14 @@ const HabitBoxesGrid = ({habitsList}:HabitBoxesProp) => {
     return( <div className={styles['habit-boxes-grid']}>
     <> 
     { habitsList.map((item:Habit, index:number) => (<HabitBox boxTitle={item.habitName}></HabitBox>)) }
-    <JournalActionButton />
-    <LoginActionButton />
-    <LogoutActionButton />
+
     </>  
     </div>);
 
 }
-// {testArray.map(o => (<div>/{o}</div>))} 
-//  const testArray = ["test1","test2"];
+
+/* <JournalActionButton />
+<LoginActionButton />
+<LogoutActionButton /> */
+
 export default HabitBoxesGrid
