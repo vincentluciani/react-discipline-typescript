@@ -1,13 +1,24 @@
 
 @media (min-width: 650px){
     .habit-box{
-        width: 225px;
-        height: 206px;
+        width: 234px;
     }
 }
 
 @media (max-width: 649px){
     .habit-box{
-        width: 300px;
+        max-width: 400px;
     }
+}
+
+.habit-box{
+    height: max-content; 
+}
+
+.week-selector{
+    margin:15px 0px 15px 0px;
+}
+
+.form-element-label{
+    margin-bottom: 10px;
 }

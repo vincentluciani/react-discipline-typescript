@@ -1,5 +1,5 @@
 import styles from './HabitBoxesGrid.module.css'
-import HabitBox from './HabitBox.js';
+import HabitBox from './HabitBox';
 import React from 'react'
 import JournalActionButton from '../common/ActionButton/JournalActionButton'
 import LoginActionButton from '../common/ActionButton/LoginActionButton'

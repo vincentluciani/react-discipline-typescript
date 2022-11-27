@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons/lib';
 import styles from './ActionButton.module.css'
-import CommonBox from '../../wrappers/Box/CommonBox'
+import CommonBox from '../BoxWrappers/CommonBox'
 
 interface ButtonProps {
     title: string;

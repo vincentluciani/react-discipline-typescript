@@ -1,10 +1,10 @@
-import styles from './HabitBox.module.css'
-import CollapsableBoxWithTitleWrapper from '../wrappers/Box/CollapsableBoxWithTitleWrapper'
+import styles from './ProgressBox.module.css'
+import CollapsableBoxWithTitleWrapper from '../common/BoxWrappers/CollapsableBoxWithTitleWrapper'
 import { useState } from 'react'
 import AuthenticationContext from '../context/authenticationContext'
 import React, { useContext } from 'react';
 
-const HabitBox = props => {
+const ProgressBox = props => {
 
     const [taskStatus,setTaskStatus] = useState('done')
 
@@ -17,4 +17,4 @@ const HabitBox = props => {
     )
 }
 
-export default HabitBox
+export default ProgressBox
