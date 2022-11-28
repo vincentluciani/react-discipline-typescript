@@ -8,7 +8,7 @@ import CheckBoxGroup from '../common/FormElements/CheckBoxGroup'
 import TextInput from '../common/FormElements/TextInput'
 import SaveButton from '../common/FormElements/SaveButton'
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteButton from '../common/FormElements/DeleteButton'
 
 
 interface HabitBoxProps {
@@ -32,9 +32,7 @@ const HabitBox = ({boxTitle }: HabitBoxProps) => {
            
             <CheckBoxGroup checkBoxesList={[{title:"Critical"},{title:"Suspendable during sickness"},{title:"Suspendable during other cases"},{title:"Do you need a timer"}]}></CheckBoxGroup>
             <SaveButton></SaveButton>
-            <Button variant="outlined" startIcon={<DeleteIcon />}>
-              Delete
-            </Button>
+            <DeleteButton></DeleteButton>
           </CollapsableBoxWithTitleWrapper>
 
     )

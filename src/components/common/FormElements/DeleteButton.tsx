@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Button, { ButtonProps } from '@mui/material/Button';
-import SaveIcon from '@mui/icons-material/Save';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ColoredButton = styled(Button)<ButtonProps>(({ theme }) => ({
     color: 'white',
@@ -9,17 +9,17 @@ const ColoredButton = styled(Button)<ButtonProps>(({ theme }) => ({
       backgroundColor: '#b657af',
       borderColor:'white'
     },
-    marginRight: '10px',
+    marginRight: '5px',
     marginTop:'10px',
     borderColor:'white'
   }));
 
-const SaveButton = () => {
+const DeleteButton = () => {
     return(
-        <ColoredButton variant="outlined" startIcon={<SaveIcon />}>
-        Save
+        <ColoredButton variant="outlined" startIcon={<DeleteIcon />}>
+        Delete
     </ColoredButton>
     )
 }
 
-export default SaveButton
+export default DeleteButton
