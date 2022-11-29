@@ -2,7 +2,7 @@ import React from "react"
 import styles from './WeekDaySelector.module.css'
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-
+import TextLabel from './TextLabel'
 
 interface Props {
     title: String
@@ -20,7 +20,7 @@ const WeekDaySelector = ({title}:Props) => {
 
       return(
 <React.Fragment>
-<div className={styles['form-element-label']}>Applies to the following days of the week:</div>
+                <TextLabel title="Applies to the following days of the week:"></TextLabel>
                 <ToggleButtonGroup
                 className="week-selector"
                 value={formats}
