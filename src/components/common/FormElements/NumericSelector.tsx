@@ -76,11 +76,8 @@ const NumericSelector = ({title}: Props) => {
                 step={null}
                 valueLabelDisplay="auto"
                 marks={marks}
-                sx = {{
-                    '&.MuiSlider-root':{
-                        color: 'var(--main-color,"#b657af")'
-                    }
-                }}
+                sx={{'margin':'15px 5px 15px 5px'}}
+
             />
         </React.Fragment>    
      
@@ -88,3 +85,11 @@ const NumericSelector = ({title}: Props) => {
 }
 
 export default NumericSelector
+
+/*
+                sx = {{
+                    '&.MuiSlider-root':{
+                        color: 'var(--main-color,"#b657af")'
+                    }
+                }}
+                */

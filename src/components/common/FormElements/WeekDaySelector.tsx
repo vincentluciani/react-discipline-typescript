@@ -25,6 +25,7 @@ const WeekDaySelector = ({title}:Props) => {
                 className="week-selector"
                 value={formats}
                 onChange={handleFormat}
+                sx={{'margin-bottom':'15px'}}
                 aria-label="text formatting"
                 
                 >

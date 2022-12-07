@@ -9,14 +9,7 @@ interface Props{
 const CssTextField = styled(TextField)({
     borderTop: '5px',
     backgroundColor: 'white',
-    '& label.Mui-focused': {
-      color: 'var(--main-color,black)',
-    },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'var(--main-color,black)',
-      },
-    },
+
   });
 
 const TextInput = ({title}:Props) => {
@@ -30,3 +23,14 @@ const TextInput = ({title}:Props) => {
 }
 
 export default TextInput
+
+/*
+    '& label.Mui-focused': {
+      color: 'var(--main-color,black)',
+    },
+    '& .MuiOutlinedInput-root': {
+      '&.Mui-focused fieldset': {
+        borderColor: 'var(--main-color,black)',
+      },
+    },
+*/

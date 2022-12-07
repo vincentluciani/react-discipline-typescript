@@ -23,10 +23,6 @@ const CheckBoxGroup = ({checkBoxesList}:Props) => {
                 control={<Checkbox   
                     sx={{
                         height:'33px',
-                        color: 'lightgrey',
-                        '&.Mui-checked': {
-                            color: 'var(--main-color,black)',
-                        }
                     }}
                     defaultChecked 
                 />}
@@ -42,3 +38,12 @@ const CheckBoxGroup = ({checkBoxesList}:Props) => {
 }
 
 export default CheckBoxGroup
+/*
+                    sx={{
+                        height:'33px',
+                        color: 'lightgrey',
+                        '&.Mui-checked': {
+                            color: 'var(--main-color,black)',
+                        }
+                    }}
+                    */

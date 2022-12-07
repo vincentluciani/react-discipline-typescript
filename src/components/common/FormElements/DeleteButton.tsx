@@ -3,7 +3,7 @@ import Button, { ButtonProps } from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const ColoredButton = styled(Button)<ButtonProps>(({ theme }) => ({
-    color: 'white',
+    /*color: 'white',
     backgroundColor: '#b657af',
     '&:hover': {
       backgroundColor: '#b657af',
@@ -11,7 +11,7 @@ const ColoredButton = styled(Button)<ButtonProps>(({ theme }) => ({
     },
     marginRight: '5px',
     marginTop:'10px',
-    borderColor:'white'
+    borderColor:'white'*/
   }));
 
 const DeleteButton = () => {
