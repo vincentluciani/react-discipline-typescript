@@ -5,7 +5,7 @@ import HabitBoxesGrid from './components/Habits/HabitBoxesGrid';
 import ProgressBoxesGrid from './components/Progress/ProgressBoxesGrid';
 import { purple } from '@mui/material/colors';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import Poc from './components/poc/poc'
 function App() {
 
   const testFunction = () =>{
@@ -26,9 +26,13 @@ function App() {
     },
   });
 
+  const testNumber = 123
+  const testTitle = "hello world"
+
   return (
     <div className="App">
     <ThemeProvider theme={theme}>
+      <Poc title={testTitle} numericValue={testNumber} />
       <FilterBox />
       <HabitBoxesGrid habitsList={habitsList}/>
       <ProgressBoxesGrid progressList={progressList}/>

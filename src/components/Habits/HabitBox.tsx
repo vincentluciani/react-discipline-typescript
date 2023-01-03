@@ -19,11 +19,24 @@ const HabitBox = ({boxTitle }: HabitBoxProps) => {
 
     const [taskStatus,setTaskStatus] = useState('done')
 
+    const [inputs,setInputs] = useState({
+        title:"",
+        isCritical:""
+        })
+
     const context = useContext(AuthenticationContext);
 
     const loginStatus = (context.isLoggedIn) ? 'logged in' : 'logged out'
 
+    const handleChange = (e:any) => {
 
+        let newInput = {
+            ...inputs,
+            [e.target.name] : e.target.value
+        }
+        setInputs(newInput)
+        console.log(inputs)
+     }
 
     return (
         <CollapsableBoxWithTitleWrapper boxTitle={boxTitle} className={styles['habit-box']}>
